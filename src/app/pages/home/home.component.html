@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Crochet Calculator</h1>
+
+
+  <div *ngFor="let linha of linhas; let i=index" class="cont">
+    <hr>
+
+    <div class="remove">
+      <button mat-icon-button color="warn" (click)="removeLinha(i)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Gramatura da linha</mat-label>
+      <input [(ngModel)]="linha.gram" matInput placeholder="Ex. 422g">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Preço da linha</mat-label>
+      <input [(ngModel)]="linha.price" matInput placeholder="Ex. 16.99">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Gramatura de linha para peça</mat-label>
+      <input [(ngModel)]="linha.use" matInput placeholder="Ex. 422g">
+    </mat-form-field>
+
+    <hr>
+  </div>
+
+  <button mat-fab color="primary" (click)="addLinha()" class="add">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <button mat-raised-button color="primary" (click)="calc()" class="calc">Calcular</button>
+
+  <div class="resultado">
+    <span>Custo da peça: {{ coust | currency : 'BRL' }} </span>
+    <span>Preço sugerido: {{ price | currency : 'BRL' }} </span>
+  </div>
+
+</div>
