@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss']
+})
+export class MenuComponent {
+
+  constructor(private router: Router) {
+
+  }
+
+  items = [
+    { name: 'Home', path: '' },
+    { name: 'Histórico', path: '/hist' },
+    { name: 'Lista de compras', path: '/list' },
+  ]
+
+  goTo(path: string) {
+    this.router.navigate([path]);
+  }
+
+}

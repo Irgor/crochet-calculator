@@ -13,11 +13,22 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { MenuComponent } from './components/menu/menu.component';
+import { HistComponent } from './pages/hist/hist.component';
+import { ListComponent } from './pages/list/list.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddListComponent } from './components/add-list/add-list.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent,
+    HistComponent,
+    ListComponent,
+    AddListComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +40,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,23 @@
+.container {
+    margin: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding-bottom: 120px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 10px 0px;
+}
+
+.add {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+}

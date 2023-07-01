@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Histórico</h1>
+
+    <div class="item" *ngFor="let item of items">
+        <div *ngIf="!!item?.name">
+
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <mat-card-title>{{ item?.name }}</mat-card-title>
+                </mat-card-header>
+
+                <mat-card-content class="content">
+                    <span>
+                        <strong>Custo da peça:</strong> {{ getPrice(item?.coust) | currency : 'BRL' }}
+                    </span>
+                    <span>
+                        <strong>Valor de venda:</strong> {{ getPrice(item?.price) | currency : 'BRL' }}
+                    </span>
+                    <span>
+                        <strong>Linhas usadas:</strong> {{ item?.lines }}
+                    </span>
+                </mat-card-content>
+
+
+                <mat-card-actions align="end">
+                    <button mat-mini-fab color="basic" (click)="remove(item.name)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>
+
+</div>
+
+<button mat-fab color="primary" class="add" (click)="openDialog()">
+    <mat-icon>add</mat-icon>
+</button>

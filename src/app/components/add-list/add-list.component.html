@@ -1,0 +1,26 @@
+<div class="container">
+
+    <mat-form-field>
+        <mat-label>Nome da peça</mat-label>
+        <input [(ngModel)]="data.name" matInput placeholder="Ex. Tapete folha coração">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Preço vendido</mat-label>
+        <input [(ngModel)]="data.price" matInput placeholder="Ex. 25,00">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Custo da peça</mat-label>
+        <input [(ngModel)]="data.coust" matInput placeholder="Ex. 10,00">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Linhas usadas</mat-label>
+        <input [(ngModel)]="data.lines" matInput placeholder="Branca 422g, Preta 120g">
+    </mat-form-field>
+    
+    
+    <button mat-raised-button [mat-dialog-close]="data" color="primary">Salvar</button>
+
+</div>
