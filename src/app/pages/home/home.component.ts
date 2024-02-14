@@ -9,6 +9,7 @@ export class HomeComponent {
 
   coust = 0;
   price = 0;
+  gainPercentage = 30;
 
   linhas = [
     { gram: '', price: '', use: '' }
@@ -29,7 +30,7 @@ export class HomeComponent {
       const price = linha.price.replace(/,/, '.');
       this.coust += (+linha.use) * (+price) / (+linha.gram);
     }
-    this.price = this.coust + (this.coust / 100 * 90);
+    this.price = (this.coust * 2) + (this.coust / 100 * this.gainPercentage);
   }
 
 }

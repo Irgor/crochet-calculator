@@ -62,7 +62,7 @@ export class HistComponent implements OnInit {
 
   getPrice(price?: string) {
     if (price) {
-      return +price.replace(/,/, '.');
+      return +price.replace(/,/g, '.');
     }
 
     return 0;

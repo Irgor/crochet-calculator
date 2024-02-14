@@ -1,6 +1,10 @@
 <div class="container">
   <h1>Crochet Calculator</h1>
 
+  <mat-form-field>
+    <mat-label>Porcentagem de ganho (%)</mat-label>
+    <input type="number" [(ngModel)]="gainPercentage" matInput>
+  </mat-form-field>
 
   <div *ngFor="let linha of linhas; let i=index" class="cont">
     <hr>
